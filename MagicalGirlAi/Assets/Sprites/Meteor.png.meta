@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7396e915023ad041ae11bdd2be0adeb
+guid: 4e879169f1b2c6a4bb3974f68aa53c7f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,70 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: GreenSpriteSheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 39
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bd0305ccc05ecd4f802908e55f39649
-      internalID: 1514445012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GreenSpriteSheet_1
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 0
-        width: 39
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6107ba875fcd03544ab9e13a6818bd58
-      internalID: -946692535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GreenSpriteSheet_2
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 0
-        width: 39
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ca78291dc39b054d9c14cc54c39b76d
-      internalID: 212000886
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -182,10 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      GreenSpriteSheet_0: 1514445012
-      GreenSpriteSheet_1: -946692535
-      GreenSpriteSheet_2: 212000886
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
