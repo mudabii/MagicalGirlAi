@@ -47,7 +47,7 @@ public class EnemyState : MonoBehaviour
 
         void Idle()
         {
-            Debug.Log("Idle");
+            
             if (Vector3.Distance(transform.position, jugador.position) < detrange && !isDead)
             {
                 currentState = EnemyStateMachine.Perseguir;
