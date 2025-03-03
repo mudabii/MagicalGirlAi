@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class AiBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
+    float lifeTime = 3f;
+
     void Start()
     {
-        
+        Destroy(gameObject, lifeTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        Destroy(gameObject);
+
     }
 }

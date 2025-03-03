@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1344590921825152466}
   - component: {fileID: 6377045537027700754}
   - component: {fileID: -8482952740030724983}
+  - component: {fileID: 7624434983456395485}
   m_Layer: 0
   m_Name: AiBullet
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 3a9875656fd3abb4da796f83c8029282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -165,3 +166,16 @@ PolygonCollider2D:
       - {x: 0.074999996, y: 0.155}
       - {x: 0.065, y: 0.16499999}
   m_UseDelaunayMesh: 0
+--- !u!114 &7624434983456395485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3025286057029929532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e589714aa4f7c84fabb428e5bda8709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 863402992314676406, guid: ae8739ece36af0048acbfa3b85fd7889, type: 3}

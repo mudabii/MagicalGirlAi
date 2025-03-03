@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyState : MonoBehaviour
 {
+    private bool isFacingRight=true;
         public enum EnemyStateMachine
         {
             Idle,
@@ -58,18 +59,18 @@ public class EnemyState : MonoBehaviour
         {
             Debug.Log("Perseguir");
 
-            transform.position = Vector3.MoveTowards(transform.position, jugador.position, speed * Time.deltaTime);
-
-            if (Vector3.Distance(transform.position, jugador.position) < attrange)
+        {
+            if (Vector2.Distance(transform.position, jugador.position) > detrange)
             {
-                currentState = EnemyStateMachine.Atacar;
-            }
-
-            if (detrange < Vector3.Distance(transform.position, jugador.position))
-            {
-                currentState = EnemyStateMachine.Idle;
+                transform.position = Vector2.MoveTowards(transform.position, jugador.position, speed * Time.deltaTime);
             }
         }
+
+            
+
+        bool isPlayerRight = transform.position.x < jugador.transform.position.x;
+        Flip(isPlayerRight);
+    }
 
         void Atacar()
         {
@@ -86,5 +87,16 @@ public class EnemyState : MonoBehaviour
             //destruyo objeto
             //vueva a activarse arranque otra vez el idle
         }
+
+    private void Flip(bool isPlayerRight)
+    {
+        if ((isFacingRight && !isPlayerRight) || (!isFacingRight && isPlayerRight))
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
     }
+}
 
