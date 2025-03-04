@@ -9,7 +9,10 @@ public class Health : MonoBehaviour
     [SerializeField] private float startingHealth;
     public float currentHealth { get; private set; }
     private Animator anim;
-    private bool dead;
+    private bool isDead =false;
+    private Aim aimScript;
+    private Rigidbody2D rb;
+    
 
 
     private SpriteRenderer spriteRenderer;
@@ -24,8 +27,11 @@ public class Health : MonoBehaviour
         currentHealth = startingHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        anim = GetComponent<Animator>();
+        aimScript = GetComponent<Aim>();
+        rb = GetComponent<Rigidbody2D>();
     }
-     private void TakeDamage(float _damage)
+    public void TakeDamage(float _damage)
     {
         currentHealth = Mathf.Clamp(currentHealth - _damage,0, startingHealth);
         if (0 < currentHealth)
@@ -33,16 +39,29 @@ public class Health : MonoBehaviour
             StartCoroutine(ChangeColorTemporarily());
         }
         else {
-            if (!dead)
+            if (isDead) return;
             {
-
-                anim.SetTrigger("Death");
-                GetComponent<Ai>().enabled = false;
-                GetComponent<AiAttack>().enabled = false;
-                dead = true;
+                Die();
             }
             }
         }
+    private void Die()
+    {
+        isDead = true;
+        anim.SetTrigger("Death");
+
+        StartCoroutine(HideFrame());
+
+        GetComponent<Ai>().enabled = false;
+        GetComponent<AiAttack>().enabled = false;
+        GetComponent<Aim>().enabled = false;
+
+        if (aimScript != null)
+        {
+            aimScript.enabled = false; 
+        }
+        rb.rotation = 0;
+    }
 
     private IEnumerator ChangeColorTemporarily()
     {
@@ -50,12 +69,15 @@ public class Health : MonoBehaviour
         yield return new WaitForSeconds(dmgColorTime); 
         spriteRenderer.color = originalColor; 
     }
-    private void Update()
+   public void AddHealth(float _value)
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(1);
-        }
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
-
+    private IEnumerator HideFrame()
+    {
+        transform.localScale *= 15f;
+        yield return new WaitForSeconds(0.9f);  
+        Destroy(gameObject);
+        
+    }
 }
