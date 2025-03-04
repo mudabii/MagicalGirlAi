@@ -10,6 +10,7 @@ TagManager:
   - Terrain
   - Enemy
   - Healthbar
+  - Key
   layers:
   - Default
   - TransparentFX

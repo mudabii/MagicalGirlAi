@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 100
+  givesPoints: 1
 --- !u!60 &-3283798971385941040
 PolygonCollider2D:
   m_ObjectHideFlags: 0

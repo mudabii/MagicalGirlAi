@@ -5,12 +5,16 @@ using UnityEngine;
 public class ItemCollector : MonoBehaviour
 {
     public int points;
+    [SerializeField] private bool givesPoints;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            ScoreManager.instance.AddPoints(points);
+            if (givesPoints)
+            {
+                ScoreManager.instance.AddPoints(points);
+            }
             Destroy(gameObject);
         }
     }
