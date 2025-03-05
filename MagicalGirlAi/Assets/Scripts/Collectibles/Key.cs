@@ -20,8 +20,7 @@ public class Key : MonoBehaviour
         int totalEnemies = enemies.Length;
 
 
-        //if (totalEnemies <= GameObject.FindGameObjectsWithTag("Enemy").Length * 0.1f)
-        if (totalEnemies <= GameObject.FindGameObjectsWithTag("Enemy").Length * 0.5f)
+        if (totalEnemies <= GameObject.FindGameObjectsWithTag("Enemy").Length * 0.1)
         {
             col.enabled = true; 
             spriteKey.color = new UnityEngine.Color(1, 1, 1, 1f);

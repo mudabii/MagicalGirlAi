@@ -18,10 +18,17 @@ public class AiBullet : MonoBehaviour
         {
             blue.TakesDmgB(dmg);
         }
+
             EnemyState purple = collision.gameObject.GetComponent<EnemyState>();
         if (purple != null)
         {
             purple.TakesDmgP(dmg);
+        }
+
+        GreenEnemy green = collision.gameObject.GetComponent<GreenEnemy>();
+        if (green != null)
+        {
+            green.TakesDmgB(dmg);
         }
 
         Destroy(gameObject);

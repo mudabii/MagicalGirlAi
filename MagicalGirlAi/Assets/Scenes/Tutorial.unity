@@ -627,8 +627,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1546974706}
   m_HandleRect: {fileID: 1546974705}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.88229996
+  m_Value: 1
+  m_Size: 0.6850967
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1276,7 +1276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.9706435, y: 0}
+  m_AnchoredPosition: {x: 2.9706435, y: 0.000015258789}
   m_SizeDelta: {x: 7.9296, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1011343562
@@ -1335,7 +1335,9 @@ MonoBehaviour:
     corazon-
     1 vida
 
-    Llave
+
+    Cuando hayas eliminado la mayoria de enemigos, podras recoger la
+    llave!
 
 
     Derrota a todos los enemigos, consigue la llave y escapa!'
@@ -2128,8 +2130,12 @@ MonoBehaviour:
     key
 
 
-    defeat all enemies, get the
-    key and escape!'
+    Once you have eliminated
+    most enemies, you will be able to grab the key!
+
+
+    defeat all enemies, get
+    the key and escape!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 62a22b33afb819b45b4b3ea0ccd49099, type: 2}
   m_sharedMaterial: {fileID: 4332040105532916529, guid: 62a22b33afb819b45b4b3ea0ccd49099, type: 2}
@@ -2426,7 +2432,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 668227813}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.66746753
+  m_Size: 0.5760203
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

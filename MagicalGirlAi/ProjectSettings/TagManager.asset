@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Healthbar
   - Key
+  - Lock
   layers:
   - Default
   - TransparentFX

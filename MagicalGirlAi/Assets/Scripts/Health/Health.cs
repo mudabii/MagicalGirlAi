@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -50,7 +51,7 @@ public class Health : MonoBehaviour
         isDead = true;
         anim.SetTrigger("Death");
 
-        StartCoroutine(HideFrame());
+        StartCoroutine(Reload());
 
         GetComponent<Ai>().enabled = false;
         GetComponent<AiAttack>().enabled = false;
@@ -73,11 +74,13 @@ public class Health : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
-    private IEnumerator HideFrame()
+    private IEnumerator Reload()
     {
         transform.localScale *= 15f;
         yield return new WaitForSeconds(0.9f);  
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
         Destroy(gameObject);
-        
+
     }
 }

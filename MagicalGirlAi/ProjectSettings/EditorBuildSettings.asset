@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 8b78f1759e022a742a4a4e3d634b281f
+  - enabled: 1
+    path: Assets/Scenes/RickRoll.unity
+    guid: cb1eaa3be1b584c4c883e513601c7e56
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: fe1f492103474e84abbb4b01795f5c79
   m_configObjects: {}
