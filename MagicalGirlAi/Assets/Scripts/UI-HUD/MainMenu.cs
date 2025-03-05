@@ -29,7 +29,6 @@ public class MainMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(8f);
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
     }
     public void StartGame()
     {
