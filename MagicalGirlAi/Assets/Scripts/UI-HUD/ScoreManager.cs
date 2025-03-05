@@ -13,22 +13,10 @@ public class ScoreManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject); 
-        }
     }
     void Start()
     {
-        if (scoreText != null)
-        {
             scoreText.text = "Score " + score.ToString();
-        }
     }
 
 
@@ -42,14 +30,5 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score " + score.ToString();
     }
 
-    public void SaveScore()
-    {
-        PlayerPrefs.SetInt("SavedScore", score);
-        PlayerPrefs.Save();
-    }
-
-    public int GetScore()
-    {
-        return score;
-    }
+   
 }

@@ -10,12 +10,13 @@ public class BadEndingToMM : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         videoPlayer.Prepare();
         Invoke("LoadMainMenu", 59f);
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(0))
         {
             LoadMainMenu();
         }
